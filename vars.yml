@@ -1,0 +1,41 @@
+---
+spare_disk_size_megs: 20480
+bridge_networking: false
+
+# monitoring
+control_plane_listen_all: true
+monitoring_install: true
+
+gluster_storageclasses:
+  - metadata:
+      name: gluster
+    parameters:
+      resturl: "{{ heketi_ip }}:8080"
+      restuser: "this_is_unused"
+      restuserkey: "boy_thats_pretty_insecure"
+  - metadata:
+      name: promops
+    parameters:
+      resturl: "{{ heketi_ip }}:8080"
+      restuser: "this_is_unused"
+      restuserkey: "boy_thats_pretty_insecure"
+
+images_directory: /home/images/kubelab
+spare_disk_location: /home/images/kubelab
+ssh_proxy_enabled: true
+ssh_proxy_user: root
+ssh_proxy_host: 10.19.110.11
+vm_ssh_key_path: /home/lmadsen/.ssh/virthost-lab
+virtual_machines:
+  - name: kube-master
+    node_type: master
+    system_ram_mb: 4096
+  - name: kube-node-1
+    node_type: nodes
+    system_ram_mb: 16384
+  - name: kube-node-2
+    node_type: nodes
+    system_ram_mb: 16384
+  - name: kube-node-3
+    node_type: nodes
+    system_ram_mb: 16384

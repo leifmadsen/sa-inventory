@@ -1,0 +1,4 @@
+vmhost ansible_host=10.19.110.11 ansible_ssh_user=root
+
+[virthost]
+vmhost
