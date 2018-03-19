@@ -30,8 +30,6 @@ images_directory: /home/images/kubelab
 spare_disk_location: /home/images/kubelab
 ssh_proxy_enabled: true
 ssh_proxy_user: root
-ssh_proxy_host: 10.19.110.11
-vm_ssh_key_path: /home/lmadsen/.ssh/virthost-lab
 virtual_machines:
   - name: kube-master
     node_type: master
