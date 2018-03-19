@@ -19,6 +19,12 @@ gluster_storageclasses:
       resturl: "{{ heketi_ip }}:8080"
       restuser: "this_is_unused"
       restuserkey: "boy_thats_pretty_insecure"
+  - metadata:
+      name: sa
+    parameters:
+      resturl: "{{ heketi_ip }}:8080"
+      restuser: "this_is_unused"
+      restuserkey: "boy_thats_pretty_insecure"
 
 images_directory: /home/images/kubelab
 spare_disk_location: /home/images/kubelab
