@@ -20,6 +20,12 @@ gluster_storageclasses:
       restuser: "this_is_unused"
       restuserkey: "boy_thats_pretty_insecure"
   - metadata:
+      name: monitoring
+    parameters:
+      resturl: "{{ heketi_ip }}:8080"
+      restuser: "this_is_unused"
+      restuserkey: "boy_thats_pretty_insecure"
+  - metadata:
       name: sa
     parameters:
       resturl: "{{ heketi_ip }}:8080"
