@@ -44,16 +44,22 @@ virtual_machines:
     system_ram_mb: 4096
   - name: kube-node-1
     node_type: nodes
-    system_ram_mb: 16384
+    system_ram_mb: 8192
   - name: kube-node-2
     node_type: nodes
-    system_ram_mb: 16384
+    system_ram_mb: 8192
   - name: kube-node-3
     node_type: nodes
-    system_ram_mb: 16384
+    system_ram_mb: 8192
   - name: cloud-node-1
     node_type: other
-    system_ram_mb: 3096
+    system_ram_mb: 2048
   - name: cloud-node-2
     node_type: other
-    system_ram_mb: 3096
+    system_ram_mb: 2048
+  - name: cloud-node-3
+    node_type: other
+    system_ram_mb: 2048
+  - name: cloud-node-4
+    node_type: other
+    system_ram_mb: 2048
